@@ -1,0 +1,44 @@
+.pet-status {
+    position: absolute;
+    top: 10vh;
+    left: -100%;
+    transition: 350ms;
+}
+
+.pet-status.active {
+    left: 30%;
+    transition: 350ms;
+}
+
+.pet-status-box {
+    width: 750px;
+    margin-top: 15px;
+}
+
+.pet-status-box a {
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    gap: 1rem;
+}
+
+.pet-status-box p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pet-status-box ul {
+   list-style-type: none;
+}
+
+.pet-status-box ul li {
+    padding: 25px;
+    font-size: 24px;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+
+.pet-status-box ul li:last-child {
+    border-bottom: 1px solid #333;
+}

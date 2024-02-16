@@ -1,0 +1,200 @@
+@hostname = 127.0.0.1
+@port = 2000
+@serverUrl = http://{{hostname}}:{{port}}
+@baseUrl = http://{{hostname}}:{{port}}
+
+###
+
+GET {{baseUrl}}/
+
+###
+GET {{baseUrl}}/status HTTP/1.1
+
+###
+POST {{baseUrl}}/pet
+Content-Type: application/json
+
+{
+    "name" : "อาโป",
+    "type" : "แพนด้า",
+    "price" : 15,
+    "status" : "ready"
+}
+###
+POST {{baseUrl}}/pet
+Content-Type: application/json
+
+{
+    "name" : "ลิลลี่",
+    "type" : "นก",
+    "price" : 15,
+    "status" : "ready"
+}
+###
+POST {{baseUrl}}/pet
+Content-Type: application/json
+
+{
+     "name" : "กี",
+    "type" : "ไก่",
+    "price" : 15,
+    "status" : "ready"
+}
+
+GET {{baseUrl}}/pet
+###
+
+DELETE {{baseUrl}}/pet
+###
+
+PU {{baseUrl}}/purchaseorder/1
+Content-Type: application/json
+
+{
+    "user_id": "01",
+    "pet_id": "1",
+    "Date" :"30/1/2567",
+    "purchase_user" : "1",
+    "pet" : "bird",
+    "is_paid" : "22",
+    "delivery_address" : "phayao"
+}
+
+###
+POST {{baseUrl}}/petbaseentity
+Content-Type: application/json
+
+{
+    "id" : "123"
+}
+
+###
+POST {{baseUrl}}/User
+Content-Type: application/json
+
+{
+    "username" : "",
+    "password" : "064film",
+    "address"  : "Phichit",
+    "first_name" : "panaphat",
+    "last_name" : "sooksampan",
+    "phone"  : "0642404608",
+    "roles" : "user",
+    "is_admin" : "yes"
+}
+###
+PUT  {{baseUrl}}/User/2
+Content-Type: application/json
+
+{
+    "username" : "guyeiei",
+    "password" : "guyhero03",
+    "address"  : "ลำพูน",
+    "email"    : "guyinjapan@example.com",
+    "first_name" : "kornkanok",
+    "last_name" : "suthatothon",
+    "phone"    : "0644069999",
+    "roles" : "user",
+    "is_admin" : "no"
+}
+
+###
+PUT  {{baseUrl}}/User/1
+Content-Type: application/json
+
+{
+    "username": "luffyking",
+    "password": "King0123456",
+    "email": "luffyistheking@gmail.com",
+    "address": "grandline007",
+    "first_name": "luffy",
+    "last_name": "Monkey",
+    "phone": "0647279209",
+     "roles" : "user",
+    "is_admin" : "no"
+}
+###
+PUT {{baseUrl}}/admin/1
+Content-Type: application/json
+
+{
+    "username" : "Aorซัง",
+    "email" : "aor007@gmail.com",
+    "password" : "0123aor",
+    "phone" : "0861234590"
+}
+
+###
+PUT {{baseUrl}}/admin/2
+Content-Type: application/json
+
+{
+    "username" : "Guyซัง",
+    "email" : "Guy007@gmail.com",
+    "password" : "01234Guy",
+    "phone" : "0123456789"
+}
+
+###
+POST  {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "usernameOrEmail" : "email@gmail.com",
+    "password" : "asdasdasA14452"
+}
+
+###
+GET {{baseUrl}}/auth/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJ1c2VybmFtZSI6Im1vZGVtbnAiLCJlbWFpbCI6bnVsbCwiaWF0IjoxNzA4MTA3NjI1LCJleHAiOjE3MDgxMDc2ODV9.pRKaMuajaCOTbKYJDd3pgDHSKh7Ro5g6GnfSB3in7kc
+###
+GET {{baseUrl}}/bothUsers
+Content-Type: application/json
+Authorization: Bearer 
+###
+GET {{baseUrl}}/only-users
+Content-Type: application/json
+Authorization: Bearer 
+### 
+GET {{baseUrl}}/only-admin
+Content-Type: application/json
+Authorization: Bearer 
+
+###
+POST {{baseUrl}}/User
+Content-Type: application/json
+
+{
+    "username" : "modemnp",
+    "password" : "000Modem111",
+    "address"  : "Sukhothai",
+    "first_name" : "Naphat",
+    "last_name" : "Mahakheta",
+    "phone"  : "0000000000",
+    "email" : "masdasdasd@gmai.c0,sd",
+    "roles" : "user",
+    "is_admin" : "yes"
+}
+
+
+###
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "usernameOrEmail" : "modemnp",
+    "password" : "000Modem111"
+}
+###
+
+###
+POST  {{baseUrl}}/admin
+Content-Type: application/json
+
+{
+    "username" : "Modem",
+    "email" : "Guy007@gmail.com",
+    "password" : "01234Guy",
+    "phone" : "0123456789"
+}

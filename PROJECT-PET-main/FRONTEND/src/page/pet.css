@@ -1,0 +1,105 @@
+ 
+.pet-content {
+  width: 96%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+.listpet-row {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(600px,1fr));
+  grid-gap: 48px;
+  list-style-type: none;
+}
+
+.pet-card {
+  border: 4px solid #3B7098;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pet-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-height: 150px;
+}
+.pet-title h2 {
+  padding: 10px 60px;
+  border-radius: 20px;
+  color: #fff;
+  background: #3B7098;
+}
+
+.pet-card img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 100%;
+  object-position: center;
+}
+
+.pet-body {
+  text-align: center;
+  padding: 32px 15px;
+}
+
+.pet-list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 16px;
+  list-style-type: none;
+}
+.pet-list .orderbtn button {
+  background: #236E0D;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+.pet-list .orderbtn button:hover {
+  background: #236E0D;
+  opacity: 75%;
+  transition: 350ms;
+}
+
+.deletebtn button {
+  background: red;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-post a {
+  display: flex;
+  padding: 5px 20px;
+  margin-top: 10px;
+  color: #fff;
+  background: #3B7098;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 255, 0.3);
+}
+.btn-post a:hover {
+  transition: 350ms;
+  opacity: 75%;
+}
+.btn-post {
+  display: flex;
+}
+
+
+/* status /*/
+
+/* .ready {
+  background: #236E0D;
+}
+
+.not-ready {
+  background: red;
+} */

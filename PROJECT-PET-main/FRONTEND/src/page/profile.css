@@ -1,0 +1,100 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background: #3B7098;
+}
+.logo {
+    padding: 0 4rem;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-bar {
+    display: flex;
+    list-style-type: none;
+    margin-right: 4rem;
+    font-size: 16px;
+}
+.menu-bar li {
+    margin: 0 2rem;
+}
+.menu-bar li a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-bar li a:hover {
+    transition: 0.5s ease;
+    color: #dbdbdb;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #75BDED;
+    min-width: 70px;
+    box-shadow: 0px 8px 16px 0px #3B7098;
+    padding: 12px 16px;
+    font-size: 16px;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*******************************************************************/
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 150px; /* ปรับขนาดตามต้องการ */
+    height: 150px; /* ปรับขนาดตามต้องการ */
+    border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: #dbdbdb solid 5px;
+    
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-input,
+  .profile-textarea {
+    width: 250px; /* ปรับขนาดตามต้องการ */
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile-input::placeholder,
+  .profile-textarea::placeholder {
+    color: #aaa; /* สีข้อความ placeholder */
+  }
+  
+  .profile-input:focus,
+  .profile-textarea:focus {
+    outline: none;
+    border-color: #007bff; /* สีขอบเมื่อได้รับการเลือก */
+  }
+
+
+  .save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
